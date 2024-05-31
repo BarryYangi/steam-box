@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - master
+  schedule:
+    - cron: "0 * * * *"
     
 
 jobs:
@@ -32,4 +34,3 @@ jobs:
       
     - name: Update-gist
       run:  go run ./cmd/box/main.go
-
